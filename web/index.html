@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Library Management System</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header><div><h1>Library Management System</h1><p>C++ Backend • HTML • CSS • JavaScript</p></div></header>
+<main>
+<section class="stats"><div><span>Total Books</span><b id="total">0</b></div><div><span>Available</span><b id="available">0</b></div><div><span>Issued</span><b id="issued">0</b></div><div><span>Members</span><b id="members">0</b></div></section>
+<section class="panel"><div class="head"><div><h2>Books</h2><p>Books managed by the C++ backend</p></div><input id="search" placeholder="Search title or author" oninput="render()"><button onclick="openBook()">+ Add Book</button></div>
+<table><thead><tr><th>ID</th><th>Title</th><th>Author</th><th>Category</th><th>Status</th><th>Action</th></tr></thead><tbody id="books"></tbody></table></section>
+<section class="panel"><div class="head"><div><h2>Members</h2><p>Library members</p></div><button onclick="openMember()">+ Add Member</button></div><div id="membersList" class="members"></div></section>
+</main>
+<div id="bookModal" class="modal"><div class="box"><button class="x" onclick="closeModal('bookModal')">×</button><h2>Add Book</h2><form onsubmit="addBook(event)"><input id="title" required placeholder="Title"><input id="author" required placeholder="Author"><input id="category" required placeholder="Category"><button>Add Book</button></form></div></div>
+<div id="memberModal" class="modal"><div class="box"><button class="x" onclick="closeModal('memberModal')">×</button><h2>Add Member</h2><form onsubmit="addMember(event)"><input id="name" required placeholder="Name"><input id="email" type="email" required placeholder="Email"><button>Add Member</button></form></div></div>
+<script src="script.js"></script></body></html>
