@@ -25,4 +25,5 @@ You can also use VS Code Live Server for `web/index.html` while the C++ server i
 - HTML/CSS/JavaScript frontend
 
 ## Live demo
+https://imritesh18.github.io/Library-Management-System/
 GitHub Pages hosts the frontend only. It cannot execute the C++ backend, so the fully functional version requires the local C++ server above.
